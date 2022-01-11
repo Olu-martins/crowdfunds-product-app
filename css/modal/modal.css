@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700;900&display=swap");
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: block;
+  width: 100%;
+  z-index: 2;
+}
+
+.total_layer {
+  display: block;
+  position: fixed;
+  top: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: transparent;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: -4;
+}
+
+.modal_snap {
+  -webkit-transform: translate(-80%, -15%);
+          transform: translate(-80%, -15%);
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Commissioner', sans-serif;
+  color: #000;
+  font-weight: 800;
+  text-align: left;
+  display: block;
+  max-width: 700px;
+  background-color: white;
+  padding: 1.5em;
+  opacity: 0.1;
+  z-index: -4;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  border-radius: 1rem;
+}
+
+.modal_snap .modal_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.modal_snap .modal_header h2 {
+  width: 85%;
+  font-size: 1.2rem;
+}
+
+.modal_snap .modal_header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  background-color: transparent;
+  border: none;
+}
+
+.modal_snap p {
+  font-family: 'Commissioner', sans-serif;
+  color: #b6aaaa;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.modal_snap .modal_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Commissioner', sans-serif;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  border-radius: 1rem;
+  margin: auto;
+  margin-top: 1.3rem;
+  border: 1px solid rgba(128, 128, 128, 0.479);
+}
+
+.modal_snap .modal_inner .content_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1.7rem;
+  width: 85%;
+}
+
+.modal_snap .modal_inner .content_input input[type="radio"] {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.75rem;
+}
+
+.modal_snap .modal_inner .content_input input[type="radio"]::before {
+  height: 18px;
+  width: 18px;
+  border: ipx solid #515757bb;
+  border-radius: 100%;
+  content: "";
+  position: absolute;
+}
+
+.modal_snap .modal_inner .content_input input[type="radio"]::after {
+  display: none;
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  top: 4px;
+  left: 4px;
+  background-color: #3cb4ac;
+  border-radius: 100%;
+}
+
+.modal_snap .modal_inner .content_input input[type="radio"]:checked::after {
+  display: block;
+}
+
+.modal_snap .modal_inner .content_input span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+
+.modal_snap .modal_inner .content_input span .text_lighter {
+  font-size: 0.75rem;
+  font-weight: lighter;
+  color: gray;
+}
+
+.modal_snap .modal_inner p {
+  width: 85%;
+  line-height: 2rem;
+}
+
+.modal_snap .modal_inner h4 {
+  width: 80%;
+  text-align: left;
+}
+
+.modal_snap .modal_inner h4 span {
+  color: #3cb4ac;
+}
+
+.modal_snap .modal_inner hr {
+  display: none;
+  width: 100%;
+}
+
+.modal_snap .modal_inner h3 {
+  font-family: 'Commissioner', sans-serif;
+  color: #3cb4ac;
+  font-weight: 600;
+  text-align: center;
+  display: none;
+  padding: 0.5em;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.modal_snap .modal_inner .enter_pledge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.modal_snap .modal_inner .enter_pledge h3 {
+  display: none;
+}
+
+.modal_snap .modal_inner .enter_pledge label {
+  position: relative;
+  width: 50%;
+}
+
+.modal_snap .modal_inner .enter_pledge label span {
+  position: absolute;
+  top: 1em;
+  left: 3.5vw;
+  color: #3cb4ac;
+}
+
+.modal_snap .modal_inner .enter_pledge label input[type="text"] {
+  font-family: 'Commissioner', sans-serif;
+  color: #000;
+  font-weight: 800;
+  text-align: left;
+  font-size: 0.7em;
+  width: 80%;
+  border-radius: 150px;
+  border: 1px solid #3cb4ac;
+  padding: 0.9em;
+  text-align: right;
+  outline: none;
+}
+
+.modal_snap .modal_inner .enter_pledge button {
+  font-family: 'Commissioner', sans-serif;
+  color: #ffff;
+  font-weight: 700;
+  text-align: center;
+  width: 45%;
+  padding: 1.2em;
+  border: none;
+  border-radius: 150px;
+  background-color: #3cb4ac;
+}
+
+.modal_snap .modal_inner.display_pledge hr, .modal_snap .modal_inner.display_pledge h3 {
+  display: block;
+}
+/*# sourceMappingURL=modal.css.map */

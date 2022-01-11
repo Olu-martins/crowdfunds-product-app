@@ -1,0 +1,179 @@
+@import "../general.scss";
+.total_layer{
+    display: block;
+    position: fixed;
+    top:0;
+    min-height: 100%;
+    width: 100%;
+    background-color: transparent;
+    transition: 1s;
+    z-index: -4;
+}
+
+.total_layer.show{
+    background-color: rgba(31, 29 29, 0.425);
+    z-index: 3;
+}
+
+.modal_snap.show {
+    transform: translate(-50%, 10%);
+    opacity: 1;
+    z-index: 4;
+  }
+  
+// modal-style (position, width, top, left)
+// display-style ($direction, $justify, $align)
+// font-style ($color, $weight, $align)
+.modal_snap{
+    @include modal-style(absolute, 80%, 15%, 45%);    
+    @include display-style(column, center, center);         
+    @include font-style(#000, 800, left);      
+    display: block;
+    max-width: 700px;
+    background-color: white;
+    padding: 1.5em;
+    opacity: 0.1;
+    z-index: -4;
+    transform: translate(-50%, -30%);
+    transition: 1s ease;
+    border-radius: 1rem;
+    .modal_header{
+        @include display-style(row, center, center);
+        width: 100%;
+        h2{
+            width: 85%;
+            font-size: 1.2rem;
+        }
+        button{
+            @include display-style(row, center, center);
+            width:15%;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    p{
+        @include font-style(rgb(182, 170, 170), 500, left );
+        width:100%;
+        font-size: 0.9rem;
+    }
+    .modal_inner{
+        @include display-style(column, center, center);
+        @include font-style(#000, 600, center);
+        width: 100%;
+        border-radius: 1rem;
+        margin: auto;
+        margin-top: 1.3rem;
+        border: 1px solid rgba(128, 128, 128, 0.479);
+        .content_input{
+            display: flex;
+            flex-direction: row;
+            margin-top: 1.7rem;
+            width: 85%;
+            input[type="radio"]{
+                position: relative;
+                height: 25px;
+                width: 25px;
+                margin-right: 0.75rem;
+                &::before{
+                    height: 18px;
+                    width: 18px;
+                    border: ipx solid #515757bb; 
+                    border-radius: 100%;
+                    content: "";
+                    position: absolute;
+                }
+                &::after{
+                    display: none;
+                    position: absolute;
+                    content: "";
+                    width: 14px;
+                    height: 14px;
+                    top: 4px;
+                    left:4px;
+                    background-color: $Moderate-cyan;
+                    border-radius: 100%;
+                }
+                &:checked::after{
+                    display: block;
+                }
+            }
+            span{
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                align-items: flex-start;
+                text-align: left;
+                .text_lighter{
+                    font-size: 0.75rem;
+                    font-weight: lighter;
+                    color: gray;
+                }
+            }
+        }
+        p{
+            width: 85%;
+            line-height: 2rem;
+        }
+        h4{
+            width: 80%;
+            text-align: left;
+            span{
+                color: $Moderate-cyan;
+            }
+        }
+        hr{
+            display: none;
+            width: 100%;
+        }
+        h3{
+            @include font-style ( $Moderate-cyan, 600, center);
+            display: none;
+            padding: 0.5em;
+            width: 80%;
+            font-size: 1rem;
+        }
+        .enter_pledge{
+            @include display-style(row, center, center);
+            width: 80%;
+            gap: 1em;
+            margin-bottom: 2em;
+            h3{
+                display: none;
+            }
+            label{
+                position: relative;
+                width: 50%;
+                span{
+                    position: absolute;
+                    top: 1em;
+                    left: 3.5vw;
+                    color: $Moderate-cyan;
+                }
+                input[type = "text" ]{
+                    @include font-style(#000, 800, left);
+                    font-size:0.7em;
+                    width: 80%;
+                    border-radius: 150px;
+                    border: 1px solid $Moderate-cyan;
+                    padding: 0.9em;
+                    text-align: right;
+                    outline: none;
+                }
+            }
+            button{
+                @include font-style(#ffff, 700, center);
+                width: 50%;
+                padding: 1.2em;
+                border: none;
+                border-radius: 150px;
+                background-color: $Moderate-cyan;
+            }
+        }
+    }
+        
+    .modal_inner.display_pledge {
+        hr, h3{
+            display: block;            
+        }    
+    }
+}   

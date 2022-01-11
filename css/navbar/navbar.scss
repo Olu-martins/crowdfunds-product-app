@@ -1,0 +1,63 @@
+@import "../general.scss";
+
+header{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: url(../../assets/img/image-hero-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+}
+
+h1{
+    @include font-style(#fff, 700, center);     // font-style( $color, $weight, $align)
+    width: 50%;    
+    margin:1.5rem;
+    font-size: 1.5rem;
+    padding-left: 0.7rem;
+}
+
+a{
+   display: flex; 
+   align-items: flex-start;
+   justify-content: flex-end;
+   outline:none;
+   width: 50%;
+   max-height: 30px;
+   z-index: 4;
+   padding: 0.7rem;
+   img{
+       padding: 0.45rem;
+       width: 20px;
+       margin-top: 0.7rem;
+   }
+}
+
+ul{
+   display: none;
+   width: 90%;   
+   padding: 0;
+   position:absolute;
+   background-color: white;
+   border-radius: 1rem;
+   z-index: 4;
+   left: 50% ;
+   top: 15%;
+   transform: translate(-50%, -15%);
+   box-shadow: 0 0 0.3rem rgb(25, 25, 25);
+   li{
+       width: 100%;
+   }
+   a{
+       @include font-style (#000, 700, left);
+       display: block;
+       padding: 1.25rem;
+   }   
+   &:last-child{
+    border: none;
+   }
+}
+

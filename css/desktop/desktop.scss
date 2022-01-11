@@ -1,0 +1,194 @@
+@import "../general.scss";
+// header
+header{
+    display: flex;
+    flex-direction: row;
+    min-height: 60vh;
+    h1{
+        width: 40%;
+        margin: 1em;
+    }
+    a{
+        display: none;
+    }
+    ul{        
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        position: inherit;   
+        transform: translate(0, 0);
+        box-shadow: none;        
+        background-color: transparent;
+        li{            
+            width: auto;
+            border:none;
+        }
+        a{           
+            width: 100%;
+            color: #fff;
+            font-weight: 400;
+            padding: 1em;
+            &:hover{
+                font-weight: 600;
+            }
+        }
+    }    
+}
+// main
+.content_section{
+    // img{
+    //     margin-top: -3rem;
+    // }
+    .mark_btn{
+        width: 110%;
+        #open_modal{
+            justify-content: center;
+        }
+        button{
+            justify-content: flex-start;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            &:hover{
+                background-color: $Moderate-cyan;
+            }
+            &:first-child{
+                width: 25%;
+                left: -20%;
+            }
+            &:last-child{
+                width:20%;
+                right:-20%;
+                background-color: rgb(255, 255, 255);
+                span{
+                    @include font-style($Moderate-cyan, 600, center);
+                     display: block;
+                     cursor: pointer;
+                     width: 120%;
+                     &:hover{
+                         color: #fff;
+                        //  width: 50px;                         
+                         height: 3rem;
+                         border-radius: 20px;
+                         background-color: $Moderate-cyan;
+                     }
+                }                
+            }
+        } 
+    }
+    &.original_content{
+        .backers_value{
+            display: flex;
+            flex-direction: row;
+        }
+        hr{
+            height: 50px;
+            border-top: none;
+            border-left: 0.3px solid rgba(202, 190, 190, 0.692);
+        }
+    }
+    &.about{
+        .about_inner{
+            width: 94%;
+            h2{ 
+                width: 100%;
+                display: inline;
+                color:black;
+                font-weight: 800;
+                span{
+                    color: $Moderate-cyan;
+                    font-weight: 700;
+                    margin-top: -2rem;
+                    // float: right;
+                    text-align: right;
+
+                }
+            }
+            .reward{
+                display: flex;
+                flex-direction: row;
+                h4{
+                    width: 65%;
+                    text-align: left;
+                }
+                button{
+                    width: 30%;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $Moderate-cyan;
+                    }
+                }
+            }
+        }
+    }
+
+}
+// modal
+.modal_snap{
+    .modal_header{
+        button{
+            cursor: pointer;
+        }
+    }
+    p{
+        font-size: 1rem;
+    }
+    .modal_inner{
+        position: relative;
+        .content_input{
+            span{
+                display: flex;
+                flex-direction: row;
+                width: 48%;
+                .text_lighter{
+                    color: rgb(247, 223, 223);
+                    font-size: 1rem;
+                    padding-left: 1em;
+                    font-weight: bold;
+                }
+            }
+        }
+        h4{
+            width: auto;
+            position: absolute;
+            left: 90%;
+            top: 0.5em;
+        }
+        h3{
+           display: none; 
+        }
+        .enter_pledge{
+            width: 90%;
+            h3{
+                display: block;
+                width: 60%;
+                text-align: left;
+            }
+            label{
+                width: 20%;
+                span{
+                    left: 1.5vw;
+                }
+                input[type = "text"]{
+                    width: 80%;
+                }
+            }
+            button{
+                width: 20%;                
+                cursor: pointer;
+                &:hover{
+                    background-color: $Dark-cyan;
+                }
+            }
+        }
+
+    }
+    .modal_inner.display_pledge{
+        h3{
+            display: none;           
+        }
+        .enter_pledge h3{
+            display: block;       
+        }
+    }    
+}
