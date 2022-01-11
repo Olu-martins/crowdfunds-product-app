@@ -1,39 +1,46 @@
 @import "../general.scss";
+
 // header
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
+    background-image: url(../../assets/img/image-hero-desktop.jpg);
     min-height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     h1{
         width: 40%;
         margin: 1em;
+        margin-left: 7rem;
     }
-    a{
+    .hamburger{
         display: none;
     }
-    ul{        
+    ul{
         display: flex;
-        width: 50%;
+        width: 30%;
+        margin: 0 auto;        
+        
         justify-content: flex-end;
-        position: inherit;   
-        transform: translate(0, 0);
-        box-shadow: none;        
         background-color: transparent;
+        box-shadow: none;
+        position: inherit;
+        transform: translate(0, 0);
         li{            
-            width: auto;
-            border:none;
-        }
-        a{           
-            width: 100%;
-            color: #fff;
-            font-weight: 400;
-            padding: 1em;
+            border: none;                        
+            color:#fff;                                
+            font-weight: 500;
+            cursor: pointer;
             &:hover{
                 font-weight: 600;
-            }
+            }        
         }
-    }    
+    }
+
 }
+
+
 // main
 .content_section{
     // img{
@@ -62,18 +69,18 @@ header{
                 background-color: rgb(255, 255, 255);
                 span{
                     @include font-style($Moderate-cyan, 600, center);
-                    display: block;
-                    margin-left: -10px;
-                    text-align: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    width: 100%;
-                    padding-top: 0.8rem;
-                    height: 2rem;
-                    border-radius: 20px;
-                    color: black;
-                    position:relative ;
-                    background-color: rgb(231, 231, 231);                
+                     display: block;
+                     margin-left: -10px;
+                     text-align: center;
+                     justify-content: center;
+                     cursor: pointer;
+                     width: 100%;
+                     padding-top: 0.8rem;
+                     height: 2rem;
+                     border-radius: 20px;
+                     color: black;
+                     position:relative ;
+                     background-color: rgb(231, 231, 231);                     
                 }                
             }
         } 

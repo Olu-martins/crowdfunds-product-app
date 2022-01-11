@@ -29,15 +29,20 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background-image: url(../../assets/img/image-hero-desktop.jpg);
   min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header h1 {
   width: 40%;
   margin: 1em;
+  margin-left: 7rem;
 }
 
-header a {
+header .hamburger {
   display: none;
 }
 
@@ -45,31 +50,27 @@ header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 30%;
+  margin: 0 auto;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   position: inherit;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-color: transparent;
 }
 
 header ul li {
-  width: auto;
   border: none;
-}
-
-header ul a {
-  width: 100%;
   color: #fff;
-  font-weight: 400;
-  padding: 1em;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-header ul a:hover {
+header ul li:hover {
   font-weight: 600;
 }
 
@@ -113,15 +114,19 @@ header ul a:hover {
   font-weight: 600;
   text-align: center;
   display: block;
+  margin-left: -10px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
-  width: 120%;
-}
-
-.content_section .mark_btn button:last-child span:hover {
-  color: #fff;
-  height: 3rem;
+  width: 100%;
+  padding-top: 0.8rem;
+  height: 2rem;
   border-radius: 20px;
-  background-color: #3cb4ac;
+  color: black;
+  position: relative;
+  background-color: #e7e7e7;
 }
 
 .content_section.original_content .backers_value {
