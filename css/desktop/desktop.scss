@@ -10,7 +10,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     h1{
-        width: 40%;
+        width: 70%;
         margin: 1em;
         margin-left: 7rem;
     }
@@ -19,16 +19,20 @@ header{
     }
     ul{
         display: flex;
-        width: 30%;
-        margin: 0 auto;        
-        
+        flex-direction: row;
+        max-width: 200px;
+        margin: 0 auto;                
+        margin-top: 2em;
         justify-content: flex-end;
+        align-items: flex-start;
         background-color: transparent;
         box-shadow: none;
         position: inherit;
         transform: translate(0, 0);
         li{            
-            border: none;                        
+            border: none;                              
+            padding: 0;
+            margin: 0;
             color:#fff;                                
             font-weight: 500;
             cursor: pointer;
@@ -57,7 +61,7 @@ header{
             cursor: pointer;
             padding: 0;
             &:hover{
-                background-color: $Moderate-cyan;
+                background-color: $Dark-cyan;
             }
             &:first-child{
                 width: 25%;
@@ -88,13 +92,20 @@ header{
     &.original_content{
         .backers_value{
             display: flex;
-            flex-direction: row;
+            flex-direction: row;            
+            // div{
+            //     span{
+            //         display: flex;
+            //     }
+            // }
+            hr{
+                width:0.5px;
+                height:50px;                        
+                border-top: none;
+                border-left: 0.3px solid rgba(202, 190, 190, 0.692);
+            }
         }
-        hr{
-            height: 50px;
-            border-top: none;
-            border-left: 0.3px solid rgba(202, 190, 190, 0.692);
-        }
+        
     }
     &.about{
         .about_inner{
@@ -121,10 +132,10 @@ header{
                     text-align: left;
                 }
                 button{
-                    width: 30%;
+                    width: 32%;
                     cursor: pointer;
                     &:hover{
-                        background-color: $Moderate-cyan;
+                        background-color: $Dark-cyan;
                     }
                 }
             }

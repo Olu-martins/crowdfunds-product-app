@@ -33,13 +33,25 @@ main {
   z-index: -4;
 }
 
+.total_layer.show {
+  background-color: rgba(31, 29, 29, 0.426);
+  z-index: 3;
+}
+
+.modal_snap.show {
+  -webkit-transform: translate(-50%, 10%);
+          transform: translate(-50%, 10%);
+  opacity: 1;
+  z-index: 4;
+}
+
 .modal_snap {
-  -webkit-transform: translate(-80%, -15%);
-          transform: translate(-80%, -15%);
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   position: absolute;
-  top: 80%;
-  left: 15%;
-  width: 45%;
+  top: 0%;
+  left: 50%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +70,7 @@ main {
   max-width: 700px;
   background-color: white;
   padding: 1.5em;
-  opacity: 0.1;
+  opacity: 0;
   z-index: -4;
   -webkit-transform: translate(-50%, -30%);
           transform: translate(-50%, -30%);
@@ -83,7 +95,7 @@ main {
 
 .modal_snap .modal_header h2 {
   width: 85%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .modal_snap .modal_header button {
@@ -104,11 +116,11 @@ main {
 
 .modal_snap p {
   font-family: 'Commissioner', sans-serif;
-  color: #b6aaaa;
+  color: #918e8e;
   font-weight: 500;
   text-align: left;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .modal_snap .modal_inner {
@@ -127,9 +139,14 @@ main {
   font-weight: 600;
   text-align: center;
   width: 100%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 1rem;
   margin: auto;
-  margin-top: 1.3rem;
+  margin-top: 1em;
   border: 1px solid rgba(128, 128, 128, 0.479);
 }
 
@@ -141,21 +158,21 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 1.7rem;
+  margin-top: 2em;
   width: 85%;
 }
 
 .modal_snap .modal_inner .content_input input[type="radio"] {
   position: relative;
-  height: 25px;
-  width: 25px;
-  margin-right: 0.75rem;
+  height: 20px;
+  width: 20px;
+  margin-right: 1em;
 }
 
 .modal_snap .modal_inner .content_input input[type="radio"]::before {
-  height: 18px;
-  width: 18px;
-  border: ipx solid #515757bb;
+  height: 19px;
+  width: 19px;
+  border: 1px solid #515757bb;
   border-radius: 100%;
   content: "";
   position: absolute;
@@ -185,17 +202,20 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   text-align: left;
 }
 
-.modal_snap .modal_inner .content_input span .text_lighter {
-  font-size: 0.75rem;
-  font-weight: lighter;
-  color: gray;
+.modal_snap .modal_inner .content_input span .text_lighter a {
+  font-size: 15px;
+  font-weight: bold;
+  color: #3cb4ac;
+  width: 100%;
 }
 
 .modal_snap .modal_inner p {
@@ -223,9 +243,9 @@ main {
   font-weight: 600;
   text-align: center;
   display: none;
-  padding: 0.5em;
+  padding: 1rem;
   width: 80%;
-  font-size: 1rem;
+  font-size: 0.5em;
 }
 
 .modal_snap .modal_inner .enter_pledge {
@@ -265,7 +285,7 @@ main {
   color: #000;
   font-weight: 800;
   text-align: left;
-  font-size: 0.7em;
+  font-size: 1em;
   width: 80%;
   border-radius: 150px;
   border: 1px solid #3cb4ac;
@@ -279,14 +299,22 @@ main {
   color: #ffff;
   font-weight: 700;
   text-align: center;
-  width: 45%;
+  width: 50%;
   padding: 1.2em;
   border: none;
   border-radius: 150px;
   background-color: #3cb4ac;
 }
 
-.modal_snap .modal_inner.display_pledge hr, .modal_snap .modal_inner.display_pledge h3 {
+.modal_snap .modal_inner.display_pledge hr {
   display: block;
+}
+
+.modal_snap .modal_inner.display_pledge h3 {
+  display: block;
+}
+
+.modal_snap .modal_inner.display_pledge .enter_pledge {
+  display: none;
 }
 /*# sourceMappingURL=modal.css.map */

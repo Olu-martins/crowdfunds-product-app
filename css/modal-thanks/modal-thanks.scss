@@ -6,7 +6,7 @@ opacity: 1;
 
 .thanks_card{
     @include display-style(column, center, center);
-    @include modal-style(fixed, 80%, 50%, 50%);    
+    @include modal-style(fixed, 50%, 50%, 85%);    
     display: flex;
     flex-direction: column;
     border-radius: 1rem;

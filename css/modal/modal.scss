@@ -11,7 +11,7 @@
 }
 
 .total_layer.show{
-    background-color: rgba(31, 29 29, 0.425);
+    background-color: rgba(31, 29, 29, 0.426);
     z-index: 3;
 }
 
@@ -21,18 +21,15 @@
     z-index: 4;
   }
   
-// modal-style (position, width, top, left)
-// display-style ($direction, $justify, $align)
-// font-style ($color, $weight, $align)
 .modal_snap{
-    @include modal-style(absolute, 80%, 15%, 45%);    
+    @include modal-style(absolute, 0%, 50%, 90%);    
     @include display-style(column, center, center);         
     @include font-style(#000, 800, left);      
     display: block;
     max-width: 700px;
     background-color: white;
     padding: 1.5em;
-    opacity: 0.1;
+    opacity: 0;
     z-index: -4;
     transform: translate(-50%, -30%);
     transition: 1s ease;
@@ -42,7 +39,7 @@
         width: 100%;
         h2{
             width: 85%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         button{
             @include display-style(row, center, center);
@@ -52,32 +49,34 @@
         }
     }
     p{
-        @include font-style(rgb(182, 170, 170), 500, left );
+        @include font-style(rgb(145, 142, 142), 500, left );
         width:100%;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .modal_inner{
         @include display-style(column, center, center);
         @include font-style(#000, 600, center);
         width: 100%;
+        display: flex;
+        flex-direction: column;
         border-radius: 1rem;
         margin: auto;
-        margin-top: 1.3rem;
+        margin-top: 1em;
         border: 1px solid rgba(128, 128, 128, 0.479);
-        .content_input{
+        .content_input{            
             display: flex;
             flex-direction: row;
-            margin-top: 1.7rem;
+            margin-top: 2em;
             width: 85%;
             input[type="radio"]{
                 position: relative;
-                height: 25px;
-                width: 25px;
-                margin-right: 0.75rem;
+                height: 20px;
+                width: 20px;
+                margin-right: 1em;
                 &::before{
-                    height: 18px;
-                    width: 18px;
-                    border: ipx solid #515757bb; 
+                    height: 19px;
+                    width: 19px;
+                    border: 1px solid #515757bb; 
                     border-radius: 100%;
                     content: "";
                     position: absolute;
@@ -100,13 +99,19 @@
             span{
                 display: flex;
                 flex-direction: column;
-                width: 90%;
+                width: 100%;
+                font-size: 15px;
+                font-weight: 600;                
                 align-items: flex-start;
                 text-align: left;
                 .text_lighter{
-                    font-size: 0.75rem;
-                    font-weight: lighter;
-                    color: gray;
+
+                    a{
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: $Moderate-cyan;
+                    width: 100%;
+                    }
                 }
             }
         }
@@ -128,9 +133,9 @@
         h3{
             @include font-style ( $Moderate-cyan, 600, center);
             display: none;
-            padding: 0.5em;
+            padding: 1rem;
             width: 80%;
-            font-size: 1rem;
+            font-size: 0.5em;
         }
         .enter_pledge{
             @include display-style(row, center, center);
@@ -151,7 +156,7 @@
                 }
                 input[type = "text" ]{
                     @include font-style(#000, 800, left);
-                    font-size:0.7em;
+                    font-size:1em;
                     width: 80%;
                     border-radius: 150px;
                     border: 1px solid $Moderate-cyan;
@@ -172,8 +177,15 @@
     }
         
     .modal_inner.display_pledge {
-        hr, h3{
+        hr{
             display: block;            
-        }    
+        } 
+        h3{
+            display: block;            
+        }
+        .enter_pledge{
+            display:none;
+        }   
     }
+
 }   

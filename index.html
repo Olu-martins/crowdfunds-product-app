@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
     <link
       rel="icon"  type="image/png" sizes="32x32" href="./favicon-32x32.png"
     />
@@ -17,26 +15,27 @@
     <link rel="stylesheet" media="(min-width: 800px)" href="./css/desktop/desktop.css"/>
   </head>
   <body>
+    <!---------------------- NAVBAR ---------------------->
     <header>
       <h1>
         <img src="./assets/icons/logo.svg"/>
       </h1>
       <a class="hamburger" href="#" id="subMenu"><img src="./assets/icons/icon-hamburger.svg"  id="subMenuIcon" alt="navbar icon"/></a>
-      <ul class="subMenu">
+      <ul class="subMenu" compact="compact">
         <li>About</li>
         <li>Discover</li>
         <li>Get Started</li>
       </ul>
     </header>
+    <!---------------------- MONITOR RISE CARD ---------------------->
     <main>
-      <div class="total_layer" aria-hidden="true"></div>
-      <!-- mastercraft content_section -->
+      <div class="total_layer" aria-hidden="true"></div>      
       <div class="content_section">  
-        <img src="./assets/icons/logo-mastercraft.svg" alt="" />
+        <img src="./assets/icons/logo-mastercraft.svg" alt=""/>
         <h1>Mastercraft Bamboo Monitor Riser</h1>
         <p>
           A beautiful & handcrafted monitor stand to reduce neck and eye strain.
-        </p>
+        </p>         
         <div class="mark_btn">
           <button id="open_modal">Back this project</button>
           <button id="bookmark">
@@ -45,18 +44,38 @@
           </button>
         </div>
       </div>
-      <!-- progress bar -->
+      <!----------------- STATISTIC CARD ----------------->  
       <div class="content_section original_content">
         <div class="backers_value">
-          <h1>$89, 914 <span>of $100,000 backed</span></h1>
-          <hr />
-          <h1>5,007 <span> total backers</span></h1>
+          <div class="">            
+            <h1 id="backed" class="">$<span class="counter" data-target="89914">0</span></h1>
+            <p class="">of $100,000 backed</p>
+          </div>
+          <hr class="">
+          <div class="">
+            <h1 id="backers" class="counter" data-target="5007">0</h1>
+            <p class="">total backers</p>
+          </div>
+          <hr class="">
+          <div class="">
+            <h1 class="">56</h1>
+            <p class="">days left</p>
+          </div>
+        </div>
+        <div id="progress-bar"  class="progress_bar" aria-label="progress bar"></div>        
+      </div>        
+      <!-- <div class="content_section original_content">
+        <div class="backers_value">                    
+          <h1> $89, 914 <span>of $100,000 backed</span></h1>
+           <hr />
+          <h1 id="backer">5,007 <span> total backers</span></h1>
           <hr />
           <h1>56 <span>days left</span></h1>
         </div>
-        <div   class="progress_bar" aria-label="progress bar"></div>
-      </div>
-      <!-- about this project -->
+        <div id="progress-bar"  class="progress_bar" aria-label="progress bar"></div>
+      </div> -->            
+       
+      <!------------------- SECTION PRODUCTS ------------------->      
       <div class="content_section original_content about">
         <h2>About this project</h2>
         <p>
@@ -71,6 +90,7 @@
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
+        <!------------------ CARD 1 ------------------>
         <div class="about_inner">
           <h2>Bamboo Stand <span>Pledge $25 or more</span></h2>
           <p>
@@ -83,6 +103,7 @@
             <button class="select_reward">Select Reward</button>
           </div>
         </div>
+        <!------------------ CARD 2 ------------------>
         <div class="about_inner">
           <h2>Black Edition Stand <span>Pledge $75 or more</span></h2>
           <p>
@@ -95,6 +116,7 @@
             <button class="select_reward">Select Reward</button>
           </div>
         </div>
+        <!------------------ CARD 3 ------------------>
         <div class="about_inner">
           <h2>Mahogany Special Edition <span>Pledge $200 or more</span></h2>
           <p>
@@ -104,11 +126,13 @@
           </p>
           <div class="reward">
             <h4>0 <span>left</span></h4>
-            <button>Out of Stock</button>
+            <button type="submit" class="checkout-button" id="checkout-button" name="checkout-button" disabled="disabled"
+            style="background-color: rgb(211, 211, 211);"
+            >Out of Stock</button>            
           </div>
         </div>
       </div>
-      <!-- modal -->
+      <!-------------------------- SECTION MODAL START -------------------------->
       <div class="modal_snap">
         <div class="modal_header">
           <h2>Back this project</h2>
@@ -120,6 +144,7 @@
           Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
           the world?
         </p>
+        <!------------------------ CARD 1 ------------------------>
         <div class="modal_inner" id="1">
           <label class="content_input">
             <input type="radio" name="pledge" value="pledge" />
@@ -134,13 +159,13 @@
           <h3>Enter your pledge</h3>
           <div class="enter_pledge" aria-hidden="true"></div>
         </div>
+        <!------------------------ CARD 2 ------------------------>
         <div class="modal_inner" id="2">
           <label class="content_input">
             <input type="radio" name="pledge" value="pledge" />
             <span
-              >Bamboo Stand
-              <span class="text_lighter">Pledge $25 or more</span></span
-            >
+            >Bamboo Stand
+              <span class="text_lighter"> <a>Pledge $25 or more</a></span></span>
           </label>
           <p>
             You get an ergonomic stand made of natural bamboo. You've helped us
@@ -152,12 +177,13 @@
           <h3>Enter your pledge</h3>
           <div class="enter_pledge" aria-hidden="true"></div>
         </div>
+        <!------------------------ CARD 3 ------------------------>
         <div class="modal_inner" id="3">
           <label class="content_input">
             <input type="radio" name="pledge" value="pledge" />
             <span
               >Black Edition Stand
-              <span class="text_lighter">Pledge $75 or more</span></span
+              <span class="text_lighter"><a>Pledge $75 or more</a></span></span
             >
           </label>
           <p>
@@ -169,12 +195,13 @@
           <h3>Enter your pledge</h3>
           <div class="enter_pledge" aria-hidden="true"></div>
         </div>
+        <!------------------------ CARD 4 ------------------------>
         <div class="modal_inner" id="4">
           <label class="content_input">
             <input type="radio" name="pledge" value="pledge" />
             <span
               >Mahogany Special Edition
-              <span class="text_lighter">Pledge $200 or more</span></span
+              <span class="text_lighter"><a>Pledge $200 or more</a></span></span
             >
           </label>
           <p>
@@ -188,7 +215,7 @@
           <div class="enter_pledge" aria-hidden="true"></div>
         </div>
       </div>
-      <!-- thanks card -->
+      <!-------------------------------- THANKS MODAL START -------------------------------->
       <div class="thanks_card" id="thanks_card">
         <img src="./assets/icons/icon-check.svg" alt="done icon" />
         <h2>Thanks for your support!</h2>
