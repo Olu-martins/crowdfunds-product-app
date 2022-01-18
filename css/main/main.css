@@ -235,24 +235,16 @@ main {
 }
 
 .content_section.about .about_inner h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1rem;
-  span-color: #3cb4ac;
-  span-text-align: left;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 320px) {
+  .content_section.about .about_inner h2 span {
+    margin-top: -1.55rem;
+    color: #3cb4ac;
+    font-size: 56px;
+  }
 }
 
 .content_section.about .about_inner .reward {
@@ -284,16 +276,16 @@ main {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Commissioner', sans-serif;
-  color: #000100;
+  color: black;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
+  font-size: 25px;
   width: 70%;
   margin: 0.1em;
-  font-size: 2.5rem;
 }
 
 .content_section.about .about_inner .reward h4 span {
-  color: #998787;
+  color: #545252;
   padding-left: 0.5rem;
   font-size: 1rem;
 }

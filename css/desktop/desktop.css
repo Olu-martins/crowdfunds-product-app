@@ -54,7 +54,7 @@ header ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  max-width: 30%;
+  max-width: 200px;
   margin: 0 auto;
   margin-top: 2em;
   -webkit-box-pack: end;
@@ -190,7 +190,8 @@ header ul li:hover {
 }
 
 .content_section.about .about_inner .reward button {
-  width: 32%;
+  width: 25%;
+  margin-left: 4.56em;
   cursor: pointer;
 }
 
@@ -218,13 +219,20 @@ header ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 48%;
 }
 
 .modal_snap .modal_inner .content_input span .text_lighter {
-  color: #f7dfdf;
   font-size: 1rem;
-  padding-left: 1em;
+  padding-left: 3em;
+  font-weight: bold;
+}
+
+.modal_snap .modal_inner .content_input span #pledge-left {
+  color: #147b74;
+  font-size: 1rem;
+  font-size: 1rem;
+  padding-left: 3em;
+  font-weight: bold;
   font-weight: bold;
 }
 
@@ -232,7 +240,8 @@ header ul li:hover {
   width: auto;
   position: absolute;
   left: 90%;
-  top: 0.5em;
+  top: -1.2em;
+  left: 31em;
 }
 
 .modal_snap .modal_inner h3 {

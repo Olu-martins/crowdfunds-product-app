@@ -1,4 +1,5 @@
 @import "../general.scss";
+@import "../../../crowdfunding-product-page/include-media-master/dist/include-media";
 
 // header
 header{
@@ -132,7 +133,8 @@ header{
                     text-align: left;
                 }
                 button{
-                    width: 32%;
+                    width: 25%;
+                    margin-left: 4.56em;
                     cursor: pointer;
                     &:hover{
                         background-color: $Dark-cyan;
@@ -156,23 +158,34 @@ header{
     .modal_inner{
         position: relative;
         .content_input{
+            
             span{
                 display: flex;
                 flex-direction: row;
-                width: 48%;
+                // width: 100%;
                 .text_lighter{
-                    color: rgb(247, 223, 223);
+                    // color: rgb(247, 223, 223);
                     font-size: 1rem;
-                    padding-left: 1em;
+                    padding-left: 3em;
                     font-weight: bold;
                 }
+                #pledge-left{
+                    color: $Dark-cyan;
+                    font-size: 1rem;
+                    font-size: 1rem;
+                    padding-left: 3em;
+                    font-weight: bold;                    
+                    font-weight: bold;                                                        
+                }
             }
+
         }
         h4{
             width: auto;
             position: absolute;
             left: 90%;
-            top: 0.5em;
+            top: -1.2em;
+            left: 31em;
         }
         h3{
            display: none; 
@@ -210,5 +223,6 @@ header{
         .enter_pledge h3{
             display: block;       
         }
-    }    
+    }           
+
 }

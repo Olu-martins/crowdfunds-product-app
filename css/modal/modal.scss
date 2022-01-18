@@ -4,7 +4,7 @@
     position: fixed;
     top:0;
     min-height: 100%;
-    width: 100%;
+    width: 100%;    
     background-color: transparent;
     transition: 1s;
     z-index: -4;
@@ -38,8 +38,10 @@
         @include display-style(row, center, center);
         width: 100%;
         h2{
-            width: 85%;
-            font-size: 1.1rem;
+            width: 70%;            
+            font-size: 1.5em;
+            justify-content: flex-start;
+            margin-right: 3rem
         }
         button{
             @include display-style(row, center, center);
@@ -48,65 +50,61 @@
             border: none;
         }
     }
+
     p{
         @include font-style(rgb(145, 142, 142), 500, left );
-        width:100%;
-        font-size: 0.8rem;
+        @include display-style(row, center, center);
+        width:90%;
+        margin: 0 auto;
+        margin-left: 2rem;
+        line-height: 1.5rem;
+        font-size: 1rem;
     }
+
     .modal_inner{
         @include display-style(column, center, center);
         @include font-style(#000, 600, center);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        width: 100%;        
+        display: flex;        
+        flex-direction: column;        
         border-radius: 1rem;
-        margin: auto;
+        margin: 2rem auto;
         margin-top: 1em;
-        border: 1px solid rgba(128, 128, 128, 0.479);
-        .content_input{            
-            display: flex;
-            flex-direction: row;
-            margin-top: 2em;
-            width: 85%;
-            input[type="radio"]{
+        border: 1px solid rgba(128, 128, 128, 0.479);                
+        &:active{
+            border: 1px solid rgba(128, 128, 128, 0.479);
+        }      
+
+        .content_input{   
+            @include display-style(column, flex-start, left );            
+            display: flex;            
+            margin: 0 auto;                        
+            position: relative;
+            width: 100%;
+               input[type="radio"]{
                 position: relative;
                 height: 20px;
                 width: 20px;
+                margin-top: 0.8rem;
                 margin-right: 1em;
-                &::before{
-                    height: 19px;
-                    width: 19px;
-                    border: 1px solid #515757bb; 
-                    border-radius: 100%;
-                    content: "";
-                    position: absolute;
-                }
-                &::after{
-                    display: none;
-                    position: absolute;
-                    content: "";
-                    width: 14px;
-                    height: 14px;
-                    top: 4px;
-                    left:4px;
-                    background-color: $Moderate-cyan;
-                    border-radius: 100%;
-                }
-                &:checked::after{
-                    display: block;
-                }
+   
             }
-            span{
+
+            @include media('<=phone'){
+               
+                span{
+                line-height: 2em;
                 display: flex;
                 flex-direction: column;
+                margin-left: -2rem;
                 width: 100%;
                 font-size: 15px;
                 font-weight: 600;                
                 align-items: flex-start;
-                text-align: left;
+                text-align: left;                
                 .text_lighter{
-
                     a{
+                    margin-left: -1rem;
                     font-size: 15px;
                     font-weight: bold;
                     color: $Moderate-cyan;
@@ -114,68 +112,36 @@
                     }
                 }
             }
+              }
+
+            
+           
         }
+                
+        h4{                   
+            margin-left: -10rem;
+            display: flex;              
+            width: 100%;
+            font-size: 25px;
+            font-weight: 600;                              
+            span{
+                color: $Dark-gray;
+                margin-left: 0.3rem;
+                font-size: 15px;
+            }
+        }
+
         p{
             width: 85%;
-            line-height: 2rem;
-        }
-        h4{
-            width: 80%;
-            text-align: left;
-            span{
-                color: $Moderate-cyan;
-            }
-        }
-        hr{
-            display: none;
-            width: 100%;
-        }
-        h3{
-            @include font-style ( $Moderate-cyan, 600, center);
-            display: none;
-            padding: 1rem;
-            width: 80%;
-            font-size: 0.5em;
-        }
-        .enter_pledge{
-            @include display-style(row, center, center);
-            width: 80%;
-            gap: 1em;
-            margin-bottom: 2em;
-            h3{
-                display: none;
-            }
-            label{
-                position: relative;
-                width: 50%;
-                span{
-                    position: absolute;
-                    top: 1em;
-                    left: 3.5vw;
-                    color: $Moderate-cyan;
-                }
-                input[type = "text" ]{
-                    @include font-style(#000, 800, left);
-                    font-size:1em;
-                    width: 80%;
-                    border-radius: 150px;
-                    border: 1px solid $Moderate-cyan;
-                    padding: 0.9em;
-                    text-align: right;
-                    outline: none;
-                }
-            }
-            button{
-                @include font-style(#ffff, 700, center);
-                width: 50%;
-                padding: 1.2em;
-                border: none;
-                border-radius: 150px;
-                background-color: $Moderate-cyan;
-            }
-        }
+            line-height: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;                    
+        }           
+
     }
-        
+
+          
     .modal_inner.display_pledge {
         hr{
             display: block;            
@@ -189,3 +155,94 @@
     }
 
 }   
+
+
+
+
+.dis{
+    @include display-style(column, center, center);
+    // display: none !important;   
+    display: block; 
+    display: flex;
+    flex-direction: column;
+    line-height: 4em;
+    background: rgb(128, 107, 107);
+
+    hr{
+        width: 100%;
+        color: rgba(181, 181, 181, 0.479);
+    }
+
+    label{
+        color: rgba(123, 123, 123, 0.479);
+    }
+
+    div{
+        width: 100%;                
+        justify-content: center;
+        
+        input{
+            width: 45%;
+            height: 6.2vh;
+            border-radius: 150px;
+            border: 1px solid rgb(198, 198, 198);  
+            text-align: center;                
+        }
+        
+        button{                    
+            width: 45%;
+            padding: 1.2em;
+            border: none;
+            border-radius: 150px;
+            background-color: $Moderate-cyan;
+            margin-left: 0.5rem;
+        }
+    }
+
+    @include media('<=phone'){
+        .user-box{
+            @include display-style(column, center, center);
+            display: none;             
+            margin-top: 0.1rem;
+            line-height: 4em;
+            min-width: 100%;
+            height: 20vh;            
+            background-color: transparent;
+            border-radius: 25px;
+            border-style: none!important;
+            hr{
+                width: 100%;
+                color: rgba(251, 251, 251, 0.479);
+            }
+
+            label{
+                color: rgba(123, 123, 123, 0.479);
+            }
+
+            div{
+                width: 100%;                
+                justify-content: center;
+                
+                input{
+                    width: 35%;
+                    height: 6.2vh;
+                    border-radius: 150px;
+                    border: 1px solid rgb(196, 196, 196);  
+                    text-align: center;                                 
+                }
+                
+                button{                    
+                    width: 35%;
+                    padding: 1.2em;
+                    border: none;
+                    border-radius: 150px;
+                    background-color: $Moderate-cyan;
+                    margin-left: 0.5rem;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+    }
+    
+    }
+}  
